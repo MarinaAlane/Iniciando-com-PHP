@@ -31,3 +31,57 @@ $arrNotas = array(
   ),
 );
 echo $arrNotas["aluno1"]["nome"];
+
+<!-- Lendo array com forEach -->
+
+$frutas = [
+  1 => "Abacaxi",
+  2 => "Atemoia",
+  3 => "Abacate",
+  4 => "Caqui",
+  5 => "Maracujá"];
+
+  foreach($frutas as $v) {
+    echo $v . "\n";
+  }
+
+  <!-- Pegando a chave e valor do array associativo -->
+
+  $roupas = [
+  1 => "Calça",
+  2 => "Camisa",
+  3 => "Saia",
+  4 => "Vestido",
+  5 => "Macacão"];
+
+  foreach($roupas as $key => $v) {
+    echo "Key: {$key} => Value {$v} \n";
+  }
+
+  <!-- Um forEach dentro do outro -->
+
+$Arrfaltas = [
+  "aluno1" => [
+    "nome" => "Ana",
+    "faltas" => "2",
+    ],
+    "aluno2" => [
+    "nome" => "Diogenes",
+    "faltas" => "5",
+    ],
+    "aluno3" => [
+    "nome" => "Mateus",
+    "faltas" => "1",
+    ],
+    "aluno4" => [
+    "nome" => "Antonia",
+    "faltas" => "6",
+    ],
+  ];
+
+  foreach ($Arrfaltas as $aluno) {
+    foreach ($aluno as $chave => $valor) {
+      echo "{$chave} = {$valor}  \n";
+    };
+    echo "\n";
+  };
